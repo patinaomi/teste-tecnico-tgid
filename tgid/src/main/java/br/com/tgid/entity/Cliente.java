@@ -1,9 +1,6 @@
 package br.com.tgid.entity;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,18 +19,19 @@ public class Cliente {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message = "O campo nome é obrigatório")
+    @Column(nullable = false)
     private String nome;
 
-    @NotBlank(message = "O campo sobrenome é obrigatório")
+    @Column(nullable = false)
     private String sobrenome;
 
-    @NotBlank(message = "O campo cpf é obrigatório")
-    @CPF
+    @Column(nullable = false, unique = true)  // para garantir que o CPF seja único
+    @CPF  // para fazer a validação do CPF
     private String cpf;
 
-    @NotBlank
-    @Email(message = "O campo email é obrigatório")
+    @Column(nullable = false)
     private String email;
 
+    @Column(nullable = false)
+    private Double saldo;
 }

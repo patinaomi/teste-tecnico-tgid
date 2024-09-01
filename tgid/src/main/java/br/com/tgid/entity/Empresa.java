@@ -1,13 +1,12 @@
 package br.com.tgid.entity;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.validator.constraints.br.CNPJ;
+import br.com.tgid.enums.TipoTaxa;
 
 @Getter
 @Setter
@@ -21,16 +20,16 @@ public class Empresa {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NotBlank(message="O campo nome é obrigatório")
+    @Column(nullable = false)
     private String nome;
 
-    @CNPJ
-    @NotBlank(message="O campo cnpj é obrigatório")
+    @Column(nullable = false, unique = true)
+    @CNPJ  // Validação de formato de CNPJ
     private String cnpj;
 
-    @Email(message="E-mail inválido")
-    @NotBlank(message="O campo email é obrigatório")
+    @Column(nullable = false)
     private String email;
 
+    @Column(nullable = false)
     private Double saldo;
 }

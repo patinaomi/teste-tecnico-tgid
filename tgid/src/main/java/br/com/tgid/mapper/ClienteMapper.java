@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ClienteMapper {
 
-    public Cliente toEntity(ClienteRequest request) {
+    public Cliente toClienteEntity(ClienteRequest request) {
         return new Cliente(
                 null,
                 request.nome(),
@@ -19,7 +19,7 @@ public class ClienteMapper {
         );
     }
 
-    public ClienteResponse toResponse(Cliente cliente) {
+    public ClienteResponse toClienteResponse(Cliente cliente) {
         return new ClienteResponse(
                 cliente.getId(),
                 cliente.getNome(),
@@ -29,4 +29,5 @@ public class ClienteMapper {
                 cliente.getSaldo()
         );
     }
+
 }

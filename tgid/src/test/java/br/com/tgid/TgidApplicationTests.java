@@ -1,4 +1,4 @@
-package br.com.tgid.tgid;
+package br.com.tgid;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

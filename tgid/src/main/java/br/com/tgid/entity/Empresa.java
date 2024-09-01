@@ -1,4 +1,4 @@
-package br.com.tgid.tgid.entity;
+package br.com.tgid.entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
@@ -21,16 +21,16 @@ public class Empresa {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
     @NotBlank(message="O campo nome é obrigatório")
     private String nome;
 
     @CNPJ
+    @NotBlank(message="O campo cnpj é obrigatório")
     private String cnpj;
 
     @Email(message="E-mail inválido")
     @NotBlank(message="O campo email é obrigatório")
     private String email;
 
-    private String telefone;
+    private Double saldo;
 }

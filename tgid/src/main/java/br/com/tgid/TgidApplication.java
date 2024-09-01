@@ -1,4 +1,4 @@
-package br.com.tgid.tgid;
+package br.com.tgid;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

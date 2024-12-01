@@ -1,10 +1,10 @@
-package br.com.tgid.request;
+package br.com.tgid.dtos.response;
 
-public record EmpresaRequest(
+public record EmpresaResponse(
+        Long id,
         String nome,
         String cnpj,
         String email,
         Double saldo
-)
-{
+) {
 }

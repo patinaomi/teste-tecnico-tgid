@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class EmailServiceImpl implements EmailService {
 
-    private ClienteRepository clienteRepository;
+    private final ClienteRepository clienteRepository;
     private final JavaMailSender javaMailSender;
 
     @Value("${spring.mail.username}")

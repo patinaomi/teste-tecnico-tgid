@@ -1,9 +1,9 @@
 package br.com.tgid.controller;
 
 import br.com.tgid.entity.Transacao;
-import br.com.tgid.request.DepositoRequest;
-import br.com.tgid.request.SaqueRequest;
-import br.com.tgid.response.TransacaoResponse;
+import br.com.tgid.dtos.request.DepositoRequest;
+import br.com.tgid.dtos.request.SaqueRequest;
+import br.com.tgid.dtos.response.TransacaoResponse;
 import br.com.tgid.service.TransacaoService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;

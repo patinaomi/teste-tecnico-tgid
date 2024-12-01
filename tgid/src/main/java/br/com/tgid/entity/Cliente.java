@@ -26,7 +26,6 @@ public class Cliente {
     private String sobrenome;
 
     @Column(nullable = false, unique = true)  // para garantir que o CPF seja único
-    @CPF  // para fazer a validação do CPF
     private String cpf;
 
     @Column(nullable = false)

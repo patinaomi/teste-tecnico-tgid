@@ -1,8 +1,8 @@
 package br.com.tgid.mapper;
 
 import br.com.tgid.entity.Cliente;
-import br.com.tgid.request.ClienteRequest;
-import br.com.tgid.response.ClienteResponse;
+import br.com.tgid.dtos.request.ClienteRequest;
+import br.com.tgid.dtos.response.ClienteResponse;
 import org.springframework.stereotype.Component;
 
 @Component

@@ -1,4 +1,4 @@
-package br.com.tgid.response;
+package br.com.tgid.dtos.response;
 
 public record SaqueResponse(
         Long id,

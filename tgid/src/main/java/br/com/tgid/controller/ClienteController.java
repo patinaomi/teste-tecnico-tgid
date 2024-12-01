@@ -1,10 +1,10 @@
 package br.com.tgid.controller;
 
 import br.com.tgid.mapper.ClienteMapper;
-import br.com.tgid.response.ClienteResponse;
+import br.com.tgid.dtos.response.ClienteResponse;
 import br.com.tgid.service.ClienteService;
 import br.com.tgid.entity.Cliente;
-import br.com.tgid.request.ClienteRequest;
+import br.com.tgid.dtos.request.ClienteRequest;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

@@ -1,4 +1,4 @@
-package br.com.tgid.request;
+package br.com.tgid.dtos.request;
 
 import br.com.tgid.enums.TipoTransacao;
 import jakarta.validation.constraints.NotNull;

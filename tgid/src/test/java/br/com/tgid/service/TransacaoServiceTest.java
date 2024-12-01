@@ -9,8 +9,8 @@ import br.com.tgid.exception.TransacaoException;
 import br.com.tgid.repository.ClienteRepository;
 import br.com.tgid.repository.EmpresaRepository;
 import br.com.tgid.repository.TransacaoRepository;
-import br.com.tgid.request.DepositoRequest;
-import br.com.tgid.request.SaqueRequest;
+import br.com.tgid.dtos.request.DepositoRequest;
+import br.com.tgid.dtos.request.SaqueRequest;
 import br.com.tgid.service.impl.EmailServiceImpl;
 import br.com.tgid.service.impl.TransacaoServiceImpl;
 import org.junit.jupiter.api.BeforeEach;
@@ -22,7 +22,6 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.Optional;
 
-import static br.com.tgid.enums.TipoTaxa.CAIXA24HORAS;
 import static br.com.tgid.enums.TipoTransacao.SAQUE;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
@@ -55,8 +54,10 @@ class TransacaoServiceTest {
 
     @Test
     void realizarDepositoComSucesso() {
+        long clienteId = 1L;
+
         // Arrange
-        DepositoRequest depositoRequest = new DepositoRequest(1L, 1L,100.0);
+        DepositoRequest depositoRequest = new DepositoRequest(1L,100.0);
 
         Cliente cliente = new Cliente(null, "Pati", "Naomi", "667.987.040-26", "pati.nao@gmail.com", 200.0);
         cliente.setId(1L);
@@ -115,7 +116,7 @@ class TransacaoServiceTest {
     @Test
     void realizarDepositoComSaldoInsuficiente() {
         // Arrange
-        DepositoRequest depositoRequest = new DepositoRequest(1L, 1L,100.0);  // Empresa ID e valor do depósito
+        DepositoRequest depositoRequest = new DepositoRequest(1L, 100.0);  // Empresa ID e valor do depósito
 
         // Configura um cliente com saldo insuficiente para o teste
         Cliente cliente = new Cliente(null, "Pati", "Naomi", "667.987.040-26", "pati.nao@gmail.com", 50.0); // Saldo menor que o valor do depósito

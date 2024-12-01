@@ -1,9 +1,8 @@
-package br.com.tgid.response;
+package br.com.tgid.dtos.response;
 
 import br.com.tgid.entity.Transacao;
 import br.com.tgid.enums.TipoTransacao;
 
-import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public record TransacaoResponse(

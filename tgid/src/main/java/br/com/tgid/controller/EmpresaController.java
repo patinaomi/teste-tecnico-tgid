@@ -2,8 +2,8 @@ package br.com.tgid.controller;
 
 import br.com.tgid.entity.Empresa;
 import br.com.tgid.mapper.EmpresaMapper;
-import br.com.tgid.request.EmpresaRequest;
-import br.com.tgid.response.EmpresaResponse;
+import br.com.tgid.dtos.request.EmpresaRequest;
+import br.com.tgid.dtos.response.EmpresaResponse;
 import br.com.tgid.service.EmpresaService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;

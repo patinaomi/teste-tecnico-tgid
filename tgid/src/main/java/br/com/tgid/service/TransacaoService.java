@@ -1,8 +1,8 @@
 package br.com.tgid.service;
 
 import br.com.tgid.entity.Transacao;
-import br.com.tgid.request.DepositoRequest;
-import br.com.tgid.request.SaqueRequest;
+import br.com.tgid.dtos.request.DepositoRequest;
+import br.com.tgid.dtos.request.SaqueRequest;
 import org.springframework.stereotype.Service;
 
 @Service
